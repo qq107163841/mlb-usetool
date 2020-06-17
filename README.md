@@ -8,5 +8,5 @@
 	}
   
   	dependencies {
-	        implementation 'com.github.qq107163841:CommonTools:1.*'
+	         implementation 'com.github.qq107163841:mlb-usetool:1.0.1'
 	}
