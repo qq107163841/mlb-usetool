@@ -6,10 +6,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -21,8 +17,11 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import rx.Observer;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class NetWorkUtlis2 {
 
@@ -46,7 +45,7 @@ public class NetWorkUtlis2 {
         retrofit = new Retrofit.Builder()
                 .baseUrl("http://preapi.eupregna.cn:9002/api/pts/")
                 .addConverterFactory(GsonConverterFactory.create()) // 设置数据解析器
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())// 支持RxJava平台
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())// 支持RxJava平台
                 .client(mOkHttpClient)//载入Okhttp
                 .build();
         retrofitAPI = retrofit.create(RetrofitAPI.class);
@@ -88,10 +87,6 @@ public class NetWorkUtlis2 {
             this.retrofitCall=retrofitCalls;
         }
 
-        @Override
-        public void onSubscribe(Disposable d) {
-
-        }
 
         @Override
         public void onNext(retrofit2.Response o) {
@@ -99,14 +94,15 @@ public class NetWorkUtlis2 {
         }
 
         @Override
-        public void onError(Throwable e) {
+        public void onCompleted() {
 
         }
 
         @Override
-        public void onComplete() {
+        public void onError(Throwable e) {
 
         }
+
     }
 
     public  void PostBaseHttpRequest2(Map<String,String> map, final RetrofitCall retrofitCall){
