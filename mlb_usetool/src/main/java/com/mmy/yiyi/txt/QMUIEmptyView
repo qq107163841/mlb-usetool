@@ -1,0 +1,23 @@
+ 1.布局
+ <com.qmuiteam.qmui.widget.QMUIEmptyView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/qmui_topbar_height"
+        android:background="@color/qmui_config_color_white"
+        app:qmui_title_text="我的一个EmptyView"
+        app:qmui_detail_text="我是详细内容"
+        android:fitsSystemWindows="true"/>
+2、具体方法
+    QMUIEmptyView   mEmptyView=findViewById(R.id.emptyView);
+    //这就默认的一个QMUIEmptyView
+3、扩展操作
+    a、显示两行提示语
+    mEmptyView.show("我的一个EmptyView" ,"我是详细内容");
+    b、显示一行提示语
+    mEmptyView.show("我的一行EmptyView", null);
+    c、显示Loading
+    mEmptyView.show(true);
+    d、显示一行文字和一个按钮
+    mEmptyView.show(false, "加载失败", null, "点击重试", null);
+

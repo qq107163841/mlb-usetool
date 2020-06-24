@@ -1,4 +1,4 @@
-package com.mmy.yiyi.toolsutil;
+package com.mmy.yiyi.activitymanager;
 
 import android.app.Activity;
 
@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  *
- *
+ *创建自帅气的 清川 on 2020/6/16
  *
  */
 

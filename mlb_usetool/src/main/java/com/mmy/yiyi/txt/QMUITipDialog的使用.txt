@@ -1,0 +1,41 @@
+1. Loading类型
+    QMUITipDialog tipDialog= new QMUITipDialog.Builder(getContext())
+            .setIconType(QMUITipDialog.Builder.ICON_TYPE_LOADING)
+            .setTipWord("正在加载")
+            .create();
+
+
+2. 成功类型
+    QMUITipDialog tipDialog= new QMUITipDialog.Builder(getContext())
+            .setIconType(QMUITipDialog.Builder.ICON_TYPE_SUCCESS)
+            .setTipWord("修改成功!")
+            .create();
+3. 失败类型
+    QMUITipDialog tipDialog= new QMUITipDialog.Builder(getContext())
+            .setIconType(QMUITipDialog.Builder.ICON_TYPE_FAIL)
+            .setTipWord("修改失败!")
+            .create();
+4. 信息提示类型
+    QMUITipDialog tipDialog= new QMUITipDialog.Builder(getContext())
+            .setIconType(QMUITipDialog.Builder.ICON_TYPE_INFO)
+            .setTipWord("请勿重复操作")
+            .create();
+5. 自定义类型
+    QMUITipDialog tipDialog= new QMUITipDialog.CustomBuilder(getContext())
+            .setContent(R.layout.tipdialog_custom)
+            .create();
+
+tipDialog.show();
+
+    xml文件：
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="自定义图标"
+            android:src="@drawable/"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义结构"
+            android:textColor="@color/"/>

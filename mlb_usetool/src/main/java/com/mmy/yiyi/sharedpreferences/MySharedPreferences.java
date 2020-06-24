@@ -1,4 +1,4 @@
-package com.mmy.yiyi.toolsutil;
+package com.mmy.yiyi.sharedpreferences;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

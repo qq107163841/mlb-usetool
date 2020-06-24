@@ -1,10 +1,9 @@
-package com.mmy.yiyi.toolsutil;
+package com.mmy.yiyi.toast;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Looper;
-import android.view.Display;
 import android.view.Gravity;
 import android.widget.Toast;
 

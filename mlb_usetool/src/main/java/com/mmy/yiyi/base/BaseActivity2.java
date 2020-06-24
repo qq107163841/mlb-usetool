@@ -13,9 +13,9 @@ import android.view.WindowManager;
 import com.mmy.yiyi.R;
 import com.mmy.yiyi.mvp_okhttp.IView;
 import com.mmy.yiyi.mvp_okhttp.PViewlmpl;
-import com.mmy.yiyi.toolsutil.ActivityManager;
+import com.mmy.yiyi.activitymanager.ActivityManager;
 import com.mmy.yiyi.toolsutil.MPermissionHelper;
-import com.mmy.yiyi.toolsutil.ToastUtils;
+import com.mmy.yiyi.toast.ToastUtils;
 
 
 

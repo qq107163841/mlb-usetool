@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--旋转动画 无限旋转-->
     <rotate
         android:duration="1000"
         android:fromDegrees="0"

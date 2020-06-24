@@ -88,12 +88,6 @@ public class MPermissionHelper {
         }
         //处理全部通过后的情况
         callback.permissionRegisterSuccess();
-//        } catch (RuntimeException e) {
-//            //6.0以下手机在没有权限时的提醒
-////            callback.permissionRegisterError(mPermissions.toArray(new String[mPermissions.size()]));
-//            Toast.makeText(mContext, "检测到您关闭了某些权限，部分功能将无法使用，请您前往应用设置界面来设置权限！", Toast.LENGTH_SHORT).show();
-////            e.printStackTrace();
-//        }
     }
 
     private boolean shouldShowRequestPermissions(String... permissions) {

@@ -1,0 +1,50 @@
+        （这个ID是个LinearLayout 是个布局就可以）
+        fab = findViewById(R.id.snackbar_fab);
+
+        Snackbar.make(fab, "已完成删除", Snackbar.LENGTH_LONG)
+                .setAction("知道了", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        "知道了" 的点击事件
+                        //Snackbar.make(fab, "Action 被点击", Snackbar.LENGTH_SHORT).show();
+
+                    }
+                })
+                //snackbar的展示隐藏回调
+                .addCallback(new Snackbar.Callback(){
+                    @Override
+                    public void onDismissed(Snackbar transientBottomBar, int event) {
+                        super.onDismissed(transientBottomBar, event);
+                        Toast.makeText(Main3Activity.this, "Snackbar隐藏", Toast.LENGTH_SHORT).show();
+                        //onDismissed()方法是当Snackbar消失的时候触发的事件；
+                    }
+
+                    @Override
+                    public void onShown(Snackbar sb) {
+                        super.onShown(sb);
+                        Toast.makeText(Main3Activity.this, "Snackbar显示", Toast.LENGTH_SHORT).show();
+                        //onShown()方法是当Snackbar显示的时候触发的事件
+                    }
+                })
+                .show();
+
+Snackbar支持动态的设置一些属性，如Action的文本颜色、显示的文本内容、显示的持续时间等，可通过下面方法进行设置：
+
+        Snackbar snackbar = Snackbar.make(coordinatorLayout, "Action 被点击", Snackbar.LENGTH_SHORT);
+        snackbar.setText("动态文本");//动态设置文本显示内容
+        snackbar.setActionTextColor(Color.RED);//动态设置Action文本的颜色
+        snackbar.setDuration(5000);//动态设置显示时间
+
+        View snackbarView = snackbar.getView();//获取Snackbar显示的View对象
+        //获取显示文本View,并设置其显示颜色
+        ((TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text)).setTextColor(Color.BLUE);
+        //获取Action文本View，并设置其显示颜色
+        ((TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_action)).setTextColor(Color.BLUE);
+        //设置Snackbar的背景色
+        snackbarView.setBackgroundColor(Color.GREEN);
+
+        //设置Snackbar显示的位置
+        ViewGroup.LayoutParams params = snackbarView.getLayoutParams();
+        CoordinatorLayout.LayoutParams layoutParams = new CoordinatorLayout.LayoutParams(params.width, params.height);
+        layoutParams.gravity = Gravity.CENTER_VERTICAL;//垂直居中
+        snackbarView.setLayoutParams(layoutParams);

@@ -3,7 +3,9 @@
     package="com.mmy.yiyi">
 
     <application>
-        <activity android:name=".mvp_okhttp.MainActivity"></activity>
+        <activity android:name=".mvp_okhttp.MainActivity" />
+        <activity android:name=".commadapter.TestAdapterActivity" />
+        <activity android:name=".mvp_kotlin.KotlinActivity"></activity>
     </application>
 
 </manifest>

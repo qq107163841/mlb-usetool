@@ -8,7 +8,7 @@ import com.mmy.yiyi.crash.CrashHandler;
 
 
 /*
- * {Nothing is Importance}
+ * 创建自帅气的 清川 on 2020/6/16
  */
 public class BaseApplication extends Application {
 

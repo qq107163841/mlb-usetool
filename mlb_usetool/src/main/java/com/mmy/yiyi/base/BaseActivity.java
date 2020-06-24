@@ -4,26 +4,26 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.mmy.yiyi.R;
 import com.mmy.yiyi.mvp_okhttp.IView;
 import com.mmy.yiyi.mvp_okhttp.PViewlmpl;
-import com.mmy.yiyi.toolsutil.ActivityManager;
+import com.mmy.yiyi.activitymanager.ActivityManager;
 import com.mmy.yiyi.toolsutil.MPermissionHelper;
-import com.mmy.yiyi.toolsutil.MyAlertDialog;
-import com.mmy.yiyi.toolsutil.ToastUtils;
-
-
+import com.mmy.yiyi.alertdialog.MyAlertDialog;
+import com.mmy.yiyi.toast.ToastUtils;
 
 /*
  * baseactivity mlb
  */
-public abstract class BaseActivity extends AppCompatActivity implements MPermissionHelper.PermissionCallBack, IView {
+public abstract class BaseActivity extends AppCompatActivity implements IView {
     public ActivityManager activityManager;
     public ToastUtils toastUtils ;
     public MPermissionHelper permissionHelper;
@@ -36,6 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity implements MPermiss
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(bindLayout());
+
         bindData();
         initView();
         initData();
@@ -124,5 +125,7 @@ public abstract class BaseActivity extends AppCompatActivity implements MPermiss
     public void onDissmiss(){
         myAlertDialog.dissmiss();
     }
+
+
 
 }

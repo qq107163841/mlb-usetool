@@ -3,9 +3,8 @@ package com.mmy.yiyi.netutils;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.mmy.yiyi.base.BaseActivity;
 import com.mmy.yiyi.base.BaseApplication;
-import com.mmy.yiyi.toolsutil.MySharedPreferences;
+import com.mmy.yiyi.sharedpreferences.MySharedPreferences;
 
 import java.io.IOException;
 

@@ -1,0 +1,26 @@
+//普通浮层
+    private QMUIPopup mNormalPopup;
+    if (mNormalPopup == null){
+        mNormalPopup = new QMUIPopup(getContext(),QMUIPopup.DIRECTION_NONE);
+        TextView textView = new TextView(getContext());
+        textView.setLayoutParams(mNormalPopup.generateLayoutParam(
+                QMUIDisplayHelper.dp2px(getContext(), 250),
+                WRAP_CONTENT
+        ));
+        textView.setLineSpacing(QMUIDisplayHelper.dp2px(getContext(), 4), 1.0f);
+        int padding = QMUIDisplayHelper.dp2px(getContext(), 20);
+        textView.setPadding(padding, padding, padding, padding);
+        textView.setText("目的IP： "+SERVER_IP+"\n"+"目的端口： "+SERVER_PORT+"\n");
+        textView.setTextColor(ContextCompat.getColor(getContext(), R.color.app_color_description));
+        mNormalPopup.setContentView(textView);
+        mNormalPopup.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                infomation.setText(getContext().getResources().getString(R.string.connect_info));
+            }
+    });
+
+    mNormalPopup.setAnimStyle(QMUIPopup.ANIM_GROW_FROM_CENTER);
+    mNormalPopup.setPreferredDirection(QMUIPopup.DIRECTION_TOP);
+    mNormalPopup.show(view);
+    infomation.setText(getContext().getResources().getString(R.string.hide_connect_info));

@@ -68,15 +68,6 @@ public class MainActivity extends BaseActivity {
         pViewlmpl.onPDetach();
     }
 
-    @Override
-    public void permissionRegisterSuccess(String... permissions) {
-
-    }
-
-    @Override
-    public void permissionRegisterError(String... permissions) {
-
-    }
 
     @Override
     protected void onResume() {

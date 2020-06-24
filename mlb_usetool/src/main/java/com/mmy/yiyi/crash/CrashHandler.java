@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by wanghk on 2020-01-03.
+ * 创建自帅气的 清川 on 2020/6/18
  */
 
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
