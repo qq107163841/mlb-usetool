@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.mmy.yiyi.R;
 
 /**
+ * 创建自帅气的 清川
  * mmy AlertDialog 弹窗工具类
  */
 public class MyAlertDialog {

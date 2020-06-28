@@ -10,7 +10,8 @@ import android.widget.Toast;
 import com.mmy.yiyi.base.BaseApplication;
 import com.mmy.yiyi.netutils.NetWorkUtlis;
 
-/*
+/**
+ * 创建自帅气的 清川
  * toast
  */
 public class ToastUtils {

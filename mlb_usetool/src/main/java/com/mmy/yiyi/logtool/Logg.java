@@ -4,7 +4,8 @@ import android.util.Log;
 
 import com.mmy.yiyi.BuildConfig;
 
-/*
+/**
+ * 创建自帅气的 清川
  * Log工具 打印为 mlb null: ===onCreate(MainActivity2.java:21)===:onResume
  */
 public class Logg {

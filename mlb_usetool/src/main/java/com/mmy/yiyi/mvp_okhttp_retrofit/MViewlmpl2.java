@@ -8,7 +8,7 @@ import okhttp3.Response;
 
 /*
  *
- * 创建自帅气的 清川 on 2020/6/16
+ * 创建自帅气的 清川
  */
 public class MViewlmpl2 implements MView2 {
     private NetWorkUtlis2 netWorkUtlis2;

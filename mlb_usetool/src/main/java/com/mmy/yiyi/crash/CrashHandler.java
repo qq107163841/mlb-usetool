@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * 创建自帅气的 清川 on 2020/6/18
+ * 创建自帅气的 清川
  */
 
 public class CrashHandler implements Thread.UncaughtExceptionHandler {

@@ -10,7 +10,7 @@ import com.mmy.yiyi.logtool.Logg;
 import java.lang.ref.WeakReference;
 
 /*
- * {Nothing is Importance}
+ * 创建自帅气的 清川
  */
 public abstract  class MyHandlerHelper<T extends Context> extends Handler{
     private static final String TAG = "MyHandlerHelper";

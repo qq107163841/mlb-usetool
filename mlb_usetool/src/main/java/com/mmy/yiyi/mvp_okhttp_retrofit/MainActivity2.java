@@ -8,6 +8,9 @@ import com.mmy.yiyi.logtool.Logg;
 
 import java.util.HashMap;
 
+/**
+ * 创建自帅气的 清川
+ */
 public class MainActivity2 extends BaseActivity implements IView2{
     private String loginUrl9002="http://preapi.eupregna.cn:9002/api/pts/login/lemonpassword";
     private PViewlmpl2 pViewlmpl2;
@@ -63,16 +66,6 @@ public class MainActivity2 extends BaseActivity implements IView2{
     protected void onDestroy() {
         super.onDestroy();
         pViewlmpl2.onPDetach();
-    }
-
-    @Override
-    public void permissionRegisterSuccess(String... permissions) {
-
-    }
-
-    @Override
-    public void permissionRegisterError(String... permissions) {
-
     }
 
     @Override

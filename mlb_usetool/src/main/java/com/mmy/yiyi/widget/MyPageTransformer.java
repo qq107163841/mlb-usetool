@@ -4,9 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-/*
- *
- * 创建自帅气的 清川 on 2020/6/23
+/**
+ * 创建自帅气的 清川
  * viewpager 的滑动效果
  * viewPager.setPageTransformer(false,new MyPageTransformer());
  */

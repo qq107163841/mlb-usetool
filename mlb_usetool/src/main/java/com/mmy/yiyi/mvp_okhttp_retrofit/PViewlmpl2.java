@@ -7,7 +7,7 @@ import java.util.Map;
 
 /*
  *
- * 创建自帅气的 清川 on 2020/6/16
+ * 创建自帅气的 清川
  */
 public class PViewlmpl2 implements PView2 {
 

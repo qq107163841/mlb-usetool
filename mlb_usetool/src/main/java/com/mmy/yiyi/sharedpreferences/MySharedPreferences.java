@@ -4,7 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/*
+/**
+ * 创建自帅气的 清川
  * MySharedPreferences 存储用户登录信息
  * //不方便引用可复制粘贴
  */

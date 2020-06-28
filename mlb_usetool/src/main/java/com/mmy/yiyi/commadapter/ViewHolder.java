@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 /*
  *
- * 创建自帅气的 清川 on 2020/6/17
+ * 创建自帅气的 清川
  */
 public class ViewHolder {
     private final SparseArray<View> mViews;

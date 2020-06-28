@@ -26,6 +26,7 @@ import com.mmy.yiyi.R;
 import com.nineoldandroids.view.animation.AnimatorProxy;
 
 /**
+ * 创建自帅气的 清川
  * 自定义输入框样式
  */
 public class FloatLabeledEditText extends FrameLayout {

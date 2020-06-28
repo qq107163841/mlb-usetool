@@ -20,7 +20,8 @@ import com.mmy.yiyi.toolsutil.MPermissionHelper;
 import com.mmy.yiyi.alertdialog.MyAlertDialog;
 import com.mmy.yiyi.toast.ToastUtils;
 
-/*
+/**
+ * 创建自帅气的 清川
  * baseactivity mlb
  */
 public abstract class BaseActivity extends AppCompatActivity implements IView {

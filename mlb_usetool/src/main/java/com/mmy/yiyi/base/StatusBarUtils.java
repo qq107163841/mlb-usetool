@@ -6,7 +6,8 @@ import android.os.Build;
 import android.view.Window;
 import android.view.WindowManager;
 
-/*
+/**
+ * 创建自帅气的 清川
  * 手机顶部通知栏的颜色
  */
 public class StatusBarUtils {

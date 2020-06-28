@@ -10,6 +10,9 @@ import com.mmy.yiyi.R;
 
 import java.util.ArrayList;
 
+/**
+ * 创建自帅气的 清川
+ */
 public class TestAdapterActivity extends AppCompatActivity {
 
     @Override

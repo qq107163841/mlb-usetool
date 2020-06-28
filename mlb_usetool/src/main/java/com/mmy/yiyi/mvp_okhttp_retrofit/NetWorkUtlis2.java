@@ -23,6 +23,9 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
+/**
+ * 创建自帅气的 清川
+ */
 public class NetWorkUtlis2 {
 
     private static volatile NetWorkUtlis2 netWorkUtlis;

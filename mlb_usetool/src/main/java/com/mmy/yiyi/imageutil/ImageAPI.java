@@ -14,7 +14,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/*
+/**
+ * 创建自帅气的 清川
  * 安卓关于图片的转换交流工具-mlb
  */
 public class ImageAPI {

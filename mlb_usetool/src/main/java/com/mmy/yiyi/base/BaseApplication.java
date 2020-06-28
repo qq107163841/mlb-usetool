@@ -7,8 +7,8 @@ import com.mmy.yiyi.BuildConfig;
 import com.mmy.yiyi.crash.CrashHandler;
 
 
-/*
- * 创建自帅气的 清川 on 2020/6/16
+/**
+ * 创建自帅气的 清川
  */
 public class BaseApplication extends Application {
 

@@ -5,9 +5,9 @@ import android.support.annotation.NonNull;
 import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 
-/*
+/**
  *
- * 创建自帅气的 清川 on 2020/6/22
+ * 创建自帅气的 清川
  * 自定义srcollview 滑动可关闭自己定义的viewlayout
  * 根据滑动的大小 可设置某些view的 show or hide
  *

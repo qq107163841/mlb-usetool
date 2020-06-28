@@ -13,7 +13,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * @author yangming on 2018/7/19
+ * 创建自帅气的 清川
  * OKHttpClient请求头
  */
 public class HeaderInterceptor  implements Interceptor {

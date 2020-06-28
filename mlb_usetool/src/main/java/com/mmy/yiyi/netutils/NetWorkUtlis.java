@@ -23,6 +23,9 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.Route;
 
+/**
+ * 创建自帅气的 清川
+ */
 public class NetWorkUtlis {
 
     private static volatile NetWorkUtlis netWorkUtlis;

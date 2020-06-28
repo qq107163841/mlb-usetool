@@ -10,7 +10,7 @@ import java.util.List;
 
 /*
  *
- * 创建自帅气的 清川 on 2020/6/17
+ * 创建自帅气的 清川
  */
 public abstract class CommListAdapter<T> extends BaseAdapter {
 

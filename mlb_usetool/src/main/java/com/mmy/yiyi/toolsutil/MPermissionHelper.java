@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * 
+ * 创建自帅气的 清川
  */
 public class MPermissionHelper {
     public static final int REQUEST_CODE_ASK_PERMISSIONS = 22123;

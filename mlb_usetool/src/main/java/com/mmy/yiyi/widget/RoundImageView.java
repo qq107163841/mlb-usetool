@@ -14,10 +14,9 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-/*
- *
- * 创建自帅气的 清川 on 2020/6/23
- *
+/**
+ * 创建自帅气的 清川
+ * 顾名思义
  */
 @SuppressLint("AppCompatCustomView")
 public class RoundImageView extends ImageView {

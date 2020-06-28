@@ -19,7 +19,8 @@ import com.mmy.yiyi.toast.ToastUtils;
 
 
 
-/*
+/**
+ * 创建自帅气的 清川
  * baseactivity mlb
  */
 public abstract class BaseActivity2 extends AppCompatActivity implements MPermissionHelper.PermissionCallBack, IView {
