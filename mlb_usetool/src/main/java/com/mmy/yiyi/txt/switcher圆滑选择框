@@ -1,0 +1,6 @@
+implementation 'com.bitvale:switcher:1.1.0'
+<com.bitvale.switcher.SwitcherX
+        android:id="@+id/switcher"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="25dp" />

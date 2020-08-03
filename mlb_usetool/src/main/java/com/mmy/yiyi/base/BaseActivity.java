@@ -4,19 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
 import com.mmy.yiyi.R;
 import com.mmy.yiyi.mvp_okhttp.IView;
 import com.mmy.yiyi.mvp_okhttp.PViewlmpl;
 import com.mmy.yiyi.activitymanager.ActivityManager;
-import com.mmy.yiyi.toolsutil.MPermissionHelper;
+import com.mmy.yiyi.utils.MPermissionHelper;
 import com.mmy.yiyi.alertdialog.MyAlertDialog;
 import com.mmy.yiyi.toast.ToastUtils;
 
@@ -61,6 +59,14 @@ public abstract class BaseActivity extends AppCompatActivity implements IView {
     /**
      * 沉浸式格式设置
      * @param isImmersion
+     * val window: Window =activity!!.window
+     *         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+     *             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+     *             window.decorView.systemUiVisibility =
+     *                 View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+     *             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+     *             window.statusBarColor = resources.getColor(R.color.black)
+     *         }
      */
     protected void isImmersion(boolean isImmersion){
         if(isImmersion){
@@ -73,6 +79,8 @@ public abstract class BaseActivity extends AppCompatActivity implements IView {
             }
         }
     }
+
+
 
     //设置状态栏颜色
     protected void setStatusBarColor(Activity activity, int barColor){

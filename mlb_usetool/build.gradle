@@ -26,35 +26,55 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.android.support:appcompat-v7:27.+'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:recyclerview-v7:27.+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //okhttp
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+    //动画开源库
     implementation 'com.nineoldandroids:library:2.4.0'
     //ButterKnife
-
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //gson
     implementation 'com.google.code.gson:gson:2.8.6'
-    //
-
+    //retrofit库
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'//gson库
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'//retrofit库
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.3.0'//rxjava库
-    implementation 'io.reactivex:rxandroid:1.2.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" //rxandroid库
+    implementation 'io.reactivex:rxandroid:1.2.1'//rxandroid库
     //
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //代码家动画库
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
-
+    //fresco
+    implementation'com.facebook.fresco:fresco:1.9.0'
+    //rxbus
+    implementation 'com.eightbitlab:rxbus:1.0.2'
+    //design
+    implementation 'com.android.support:design:27.1.1'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+    //选中框
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    //FlycoTabLayout  顶部滑动
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 }
 repositories {
     mavenCentral()

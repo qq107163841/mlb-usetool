@@ -1,0 +1,63 @@
+
+<com.facebook.drawee.view.SimpleDraweeView
+    app:roundAsCircle="true"
+    android:scaleType="fitXY"
+    app:roundedCornerRadius="3dp"
+    android:layout_gravity="center"
+    app:placeholderImage="@drawable/head"
+    android:layout_width="70dp"
+    android:layout_height="70dp"/>
+
+    XML属性意义
+
+    fadeDuration   淡入淡出动画持续时间(单位:毫秒ms)
+
+    actualImageScaleType   实际图像的缩放类型
+
+    placeholderImage   占位图
+
+    placeholderImageScaleType   占位图的缩放类型
+
+    progressBarImage   进度图
+
+    progressBarImageScaleType  进度图的缩放类型
+
+    progressBarAutoRotateInterval  进度图自动旋转间隔时间(单位:毫秒ms)
+
+    failureImage  失败图
+
+    failureImageScaleType  失败图的缩放类型
+
+    retryImage   重试图
+
+    retryImageScaleType  重试图的缩放类型
+
+    backgroundImage   背景图
+
+    overlayImage   叠加图
+
+    pressedStateOverlayImage  按压状态下所显示的叠加图
+
+    roundAsCircle   设置为圆形图
+
+    roundedCornerRadius   圆角半径
+
+    roundTopLeft  左上角是否为圆角
+
+    roundTopRight   右上角是否为圆角
+
+    roundBottomLeft  左下角是否为圆角
+
+    roundBottomRight  右下角是否为圆角
+
+    roundingBorderWidth  圆形或者圆角图边框的宽度
+
+    roundingBorderColor   圆形或者圆角图边框的颜色
+
+    roundWithOverlayColor   圆形或者圆角图底下的叠加颜色(只能设置颜色)
+
+    viewAspectRatio   控件纵横比
+
+    //代码中：Uri uri = Uri.parse(urlStr);
+
+    fresco_test.setImageURI(uri);//之后的一切全交给fresco就行了

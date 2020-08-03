@@ -1,5 +1,6 @@
 package com.mmy.yiyi.alertdialog;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -52,6 +53,7 @@ public class MyAlertDialog {
      * @param height alerdialog的高
      * @param isOutSide 是否back可取消
      */
+    @SuppressLint("NewApi")
     public void showLoadingDialog(String title,int imageview,int width,int height,boolean isOutSide) {
         View view = LayoutInflater.from(context).inflate(R.layout.alert_dialog_loading, null);
         ImageView imageView = view.findViewById(R.id.alert_loading_image);
@@ -77,7 +79,7 @@ public class MyAlertDialog {
         alertDialog.setView(view,0,0,0,0);
 
     }
-
+    @SuppressLint("NewApi")
     public void showLoadingDialog(String title) {
         View view = LayoutInflater.from(context).inflate(R.layout.alert_dialog_loading, null);
         ImageView imageView = view.findViewById(R.id.alert_loading_image);
@@ -109,6 +111,7 @@ public class MyAlertDialog {
      * @param context 上下文
      * @param message 显示的信息
      */
+    @SuppressLint("NewApi")
     public void showConfirmDialog(Context context, String message,boolean isDissmiss) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         final AlertDialog alertDialog = builder.create();
@@ -144,7 +147,8 @@ public class MyAlertDialog {
      * @param context 上下文
      * @param message 显示的信息
      */
-    public void showConfirmDialog(Context context, String message,String cancel,String confirm,boolean isDissmiss) {
+    @SuppressLint("NewApi")
+    public void showConfirmDialog(Context context, String message, String cancel, String confirm, boolean isDissmiss) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         final AlertDialog alertDialog = builder.create();
         alertDialog.show();
@@ -175,6 +179,7 @@ public class MyAlertDialog {
         alertDialog.setView(view,0,0,0,0);
     }
 
+    @SuppressLint("NewApi")
     public void ShowBackTipDialog(String msg){
         AlertDialog.Builder builder = new AlertDialog.Builder(context,R.style.NobackDialog);
         final AlertDialog alertDialog = builder.create();

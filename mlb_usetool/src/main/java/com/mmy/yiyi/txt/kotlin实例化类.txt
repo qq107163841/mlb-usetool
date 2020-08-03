@@ -1,7 +1,7 @@
-    var tipLoading : QMUITipDialog? = null
-    initData(){
-        tipLoading = QMUITipDialog.Builder(this)
-                        .setIconType(QMUITipDialog.Builder.ICON_TYPE_LOADING)
-                        .setTipWord("正在加载")
-                        .create()
-    }
+var tipLoading : QMUITipDialog? = null
+initData(){
+    tipLoading = QMUITipDialog.Builder(this)
+        .setIconType(QMUITipDialog.Builder.ICON_TYPE_LOADING)
+        .setTipWord("正在加载")
+        .create()
+}

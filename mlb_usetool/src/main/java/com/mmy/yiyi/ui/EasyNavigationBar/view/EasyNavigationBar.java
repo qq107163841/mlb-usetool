@@ -1,4 +1,4 @@
-package com.mmy.yiyi.btn.view;
+package com.mmy.yiyi.ui.EasyNavigationBar.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -24,9 +24,9 @@ import android.widget.TextView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.mmy.yiyi.R;
-import com.mmy.yiyi.btn.adapter.ViewPagerAdapter;
-import com.mmy.yiyi.btn.constant.Anim;
-import com.mmy.yiyi.btn.utils.NavigationUtil;
+import com.mmy.yiyi.ui.EasyNavigationBar.adapter.ViewPagerAdapter;
+import com.mmy.yiyi.ui.EasyNavigationBar.constant.Anim;
+import com.mmy.yiyi.ui.EasyNavigationBar.utils.NavigationUtil;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -96,7 +96,7 @@ public class EasyNavigationBar extends LinearLayout {
     //提示红点距图标顶部的距离
     private float hintPointTop;
 
-    private EasyNavigationBar.OnTabClickListener onTabClickListener;
+    private OnTabClickListener onTabClickListener;
     private OnCenterTabSelectListener onCenterTabClickListener;
     private OnTabLoadListener onTabLoadListener;
 
@@ -425,7 +425,7 @@ public class EasyNavigationBar extends LinearLayout {
         //Tab文字距Tab图标的距离
         tabTextTop = NavigationUtil.dip2px(getContext(), 2);
         //Tab文字大小
-        tabTextSize = 12;
+        tabTextSize = 14;
         //未选中Tab字体颜色
         normalTextColor = Color.parseColor("#666666");
         //选中字体颜色
@@ -491,7 +491,9 @@ public class EasyNavigationBar extends LinearLayout {
         //消息红点99+的半径
         msgPointMoreRadius = 10;
         //消息红点颜色
-        msgPointColor = Color.parseColor("#ff0000");
+        msgPointColor = Color.parseColor("#000000");
+
+
 
         return this;
     }
@@ -621,7 +623,6 @@ public class EasyNavigationBar extends LinearLayout {
             return false;
         }
         buildCommonNavigation();
-
         return true;
     }
 
@@ -683,7 +684,7 @@ public class EasyNavigationBar extends LinearLayout {
         }
         adapter = new ViewPagerAdapter(fragmentManager, fragmentList);
         mViewPager.setAdapter(adapter);
-        mViewPager.setOffscreenPageLimit(10);
+        mViewPager.setOffscreenPageLimit(0);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -1202,7 +1203,9 @@ public class EasyNavigationBar extends LinearLayout {
      * @param count    显示的数量  99个以上显示99+  少于1则不显示
      */
     public void setMsgPointCount(int position, int count) {
+
         if (msgPointList == null || msgPointList.size() < (position + 1))
+        //if (msgPointList == null )
             return;
         TextView msgPointView = msgPointList.get(position);
         if (count > 99) {
@@ -1419,7 +1422,8 @@ public class EasyNavigationBar extends LinearLayout {
         return this;
     }
 
-    public EasyNavigationBar anim(Anim anim) {
+    public EasyNavigationBar anim(
+            Anim anim) {
         if (anim != null) {
             this.anim = anim.getYoyo();
         } else {
@@ -1444,7 +1448,7 @@ public class EasyNavigationBar extends LinearLayout {
     }
 
 
-    public EasyNavigationBar setOnTabClickListener(EasyNavigationBar.OnTabClickListener onTabClickListener) {
+    public EasyNavigationBar setOnTabClickListener(OnTabClickListener onTabClickListener) {
         this.onTabClickListener = onTabClickListener;
         return this;
     }
@@ -1527,7 +1531,7 @@ public class EasyNavigationBar extends LinearLayout {
         return smoothScroll;
     }
 
-    public EasyNavigationBar.OnTabClickListener getOnTabClickListener() {
+    public OnTabClickListener getOnTabClickListener() {
         return onTabClickListener;
     }
 

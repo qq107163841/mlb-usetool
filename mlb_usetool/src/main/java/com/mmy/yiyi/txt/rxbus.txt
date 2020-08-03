@@ -1,0 +1,10 @@
+Activity->oncreate
+Fragment->onCreateView
+    接收
+    Bus.observe<Boolean>()
+                .subscribe {
+                    change(it!!)
+                }
+                .registerInBus(this)
+    发送
+    Bus.send()

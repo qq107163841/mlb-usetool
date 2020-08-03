@@ -1,0 +1,5 @@
+<com.suke.widget.SwitchButton
+    android:id="@+id/fragemnt4_item_layout0_check"
+    android:layout_width="50dp"
+    android:layout_height="match_parent"/>
+

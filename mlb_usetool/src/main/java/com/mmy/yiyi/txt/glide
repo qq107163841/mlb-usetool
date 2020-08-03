@@ -1,0 +1,131 @@
+Kotlin
+Glide.with(context!!)
+    .load(list!!.get(position%list!!.size))
+    .into(inflate.guanzhu_viewpager_layout_view)
+Java
+Glide.with(Context context).load(Strint url).into(ImageView imageView);
+
+// 加载本地图片
+File file = new File(getExternalCacheDir() + "/image.jpg");
+Glide.with(this).load(file).into(imageView);
+
+// 加载应用资源
+int resource = R.drawable.image;
+Glide.with(this).load(resource).into(imageView);
+
+// 加载二进制流
+byte[] image = getImageBytes();
+Glide.with(this).load(image).into(imageView);
+
+// 加载Uri对象
+Uri imageUri = getImageUri();
+Glide.with(this).load(imageUri).into(imageView);
+
+//加载带有占位图
+Glide.with(this).load(url).placeholder(R.drawable.loading).into(imageView);
+
+//加载失败 放置占位符
+Glide.with(this).load(url).placeholder(R.drawable.loading).error(R.drawable.error)
+     .diskCacheStrategy(DiskCacheStrategy.NONE)//关闭Glide的硬盘缓存机制
+     .into(imageView);
+//DiskCacheStrategy.NONE： 表示不缓存任何内容。
+//DiskCacheStrategy.SOURCE： 表示只缓存原始图片。
+//DiskCacheStrategy.RESULT： 表示只缓存转换过后的图片（默认选项）。
+//DiskCacheStrategy.ALL ： 表示既缓存原始图片，也缓存转换过后的图片。
+
+加载指定格式的图片--指定为静止图片
+Glide.with(this)
+     .load(url)
+     .asBitmap()//只加载静态图片，如果是git图片则只加载第一帧。
+     .placeholder(R.drawable.loading)
+     .error(R.drawable.error)
+     .diskCacheStrategy(DiskCacheStrategy.NONE)
+     .into(imageView);
+
+加载动态图片
+Glide.with(this)
+     .load(url)
+     .asGif()//加载动态图片，若现有图片为非gif图片，则直接加载错误占位图。
+     .placeholder(R.drawable.loading)
+     .error(R.drawable.error)
+     .diskCacheStrategy(DiskCacheStrategy.NONE)
+     .into(imageView);
+
+加载指定大小的图片
+Glide.with(this)
+     .load(url)
+     .placeholder(R.drawable.loading)
+     .error(R.drawable.error)
+     .diskCacheStrategy(DiskCacheStrategy.NONE)
+     .override(100, 100)//指定图片大小
+     .into(imageView);
+
+关闭框架的内存缓存机制
+Glide.with(this)
+     .load(url)
+     .skipMemoryCache(true)  //传入参数为false时，则关闭内存缓存。
+     .into(imageView);
+
+关闭硬盘的缓存
+Glide.with(this)
+     .load(url)
+     .diskCacheStrategy(DiskCacheStrategy.NONE)     //关闭硬盘缓存操作
+     .into(imageView);
+
+//其他参数表示：
+//DiskCacheStrategy.NONE： 表示不缓存任何内容。
+//DiskCacheStrategy.SOURCE： 表示只缓存原始图片。
+//DiskCacheStrategy.RESULT： 表示只缓存转换过后的图片（默认选项）。
+//DiskCacheStrategy.ALL ： 表示既缓存原始图片，也缓存转换过后的图片。
+
+当引用的 url 存在 token 时解决方法-->重写 Glide 的 GlideUrl 方法
+public class MyGlideUrl extends GlideUrl {
+
+    private String mUrl;
+
+    public MyGlideUrl(String url) {
+        super(url);
+        mUrl = url;
+    }
+
+    @Override
+    public String getCacheKey() {
+        return mUrl.replace(findTokenParam(), "");
+    }
+
+    private String findTokenParam() {
+        String tokenParam = "";
+        int tokenKeyIndex = mUrl.indexOf("?token=") >= 0 ? mUrl.indexOf("?token=") : mUrl.indexOf("&token=");
+        if (tokenKeyIndex != -1) {
+            int nextAndIndex = mUrl.indexOf("&", tokenKeyIndex + 1);
+            if (nextAndIndex != -1) {
+                tokenParam = mUrl.substring(tokenKeyIndex + 1, nextAndIndex + 1);
+            } else {
+                tokenParam = mUrl.substring(tokenKeyIndex);
+            }
+        }
+        return tokenParam;
+    }
+}
+然后加载图片的方式为：
+Glide.with(this)
+     .load(new MyGlideUrl(url))
+     .into(imageView);
+
+Glide 实现预加载
+//a、预加载代码
+Glide.with(this)
+     .load(url)
+     .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+     .preload();
+
+//preload() 有两种重载
+ // 1、带有参数的重载,参数作用是设置预加载的图片大小；
+//2、不带参数的表示加载的图片为原始尺寸；
+
+//b、使用预加载的图片
+Glide.with(this)
+     .load(url)
+     .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+     .into(imageView);
+ 切记：diskCacheStrategy() 方法内必须设置参数为：“ DiskCacheStrategy.SOURCE ”，否则可能预加载失败，导致显示图片时，需要重新加载。

@@ -1,4 +1,4 @@
-package com.mmy.yiyi.btn.utils;
+package com.mmy.yiyi.ui.EasyNavigationBar.utils;
 
 import android.content.Context;
 import android.graphics.Paint;
@@ -101,7 +101,7 @@ public class NavigationUtil {
     }
 
 
-    public static float compareTo(Context context,float dimension, float tabTextSize,int textSizeType) {
+    public static float compareTo(Context context, float dimension, float tabTextSize, int textSizeType) {
         if(dimension==0){
             return tabTextSize;
         }else{

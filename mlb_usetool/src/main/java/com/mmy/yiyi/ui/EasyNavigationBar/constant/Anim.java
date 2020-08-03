@@ -1,4 +1,4 @@
-package com.mmy.yiyi.btn.constant;
+package com.mmy.yiyi.ui.EasyNavigationBar.constant;
 
 import com.daimajia.androidanimations.library.Techniques;
 

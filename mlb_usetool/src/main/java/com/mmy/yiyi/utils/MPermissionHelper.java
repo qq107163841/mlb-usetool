@@ -1,4 +1,4 @@
-package com.mmy.yiyi.toolsutil;
+package com.mmy.yiyi.utils;
 
 import android.app.Activity;
 import android.app.Dialog;

@@ -1,4 +1,4 @@
-package com.mmy.yiyi.btn.adapter;
+package com.mmy.yiyi.ui.EasyNavigationBar.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
