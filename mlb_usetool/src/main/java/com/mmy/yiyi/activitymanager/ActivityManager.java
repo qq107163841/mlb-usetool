@@ -63,4 +63,6 @@ public class ActivityManager {
     public int getActivitySize(){
         return activityStack.size();
     }
+
+
 }

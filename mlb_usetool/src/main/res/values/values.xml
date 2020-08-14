@@ -291,7 +291,7 @@
         <item name="android:windowExitAnimation">@anim/animate_slide_up_exit</item>
     </style>
     <!---->
-    <!--<declare-styleable name="FabOptions"><attr format="reference" name="button_menu" type="menu"/><attr format="reference" name="background_color" type="int"/><attr format="reference" name="fab_color" type="int"/></declare-styleable>
+    <declare-styleable name="FabOptions"><attr format="reference" name="button_menu" type="menu"/><attr format="reference" name="background_color" type="int"/><attr format="reference" name="fab_color" type="int"/></declare-styleable>
     <dimen name="faboptions_button_layout_height">44dp</dimen>
     <dimen name="faboptions_button_padding">8dp</dimen>
     <dimen name="faboptions_icon_size">20dp</dimen>
@@ -300,5 +300,5 @@
     <dimen name="faboptions_separator_margin">2dp</dimen>
     <dimen name="faboptions_vector_dimensions">24dp</dimen>
     <string name="faboptions_vector_close_path">M 6 6 L 18 18, M 12 12 L 12 12, M 6 18 L 18 6</string>
-    <string name="faboptions_vector_overflow_path">M 6 12 L 6 12.1, M 12 12.1 L 12 12, M 18 12.1 L 18 12</string>-->
+    <string name="faboptions_vector_overflow_path">M 6 12 L 6 12.1, M 12 12.1 L 12 12, M 18 12.1 L 18 12</string>
 </resources>

@@ -1,4 +1,3 @@
-package com.mlb.fangkaiyan.util
 
 import android.app.Activity
 import java.util.*
