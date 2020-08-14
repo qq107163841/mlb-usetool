@@ -114,7 +114,7 @@ public abstract class BaseActivity2 extends AppCompatActivity implements MPermis
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
+        activityManager.removeOneActivity(this);
     }
 
 }

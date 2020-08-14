@@ -3,3 +3,4 @@
     android:layout_width="50dp"
     android:layout_height="match_parent"/>
 
+implementation 'com.github.zcweng:switch-button:0.0.3@aar'
